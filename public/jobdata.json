@@ -1,0 +1,130 @@
+[
+    {
+      "id": 1,
+      "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/google.png",
+      "job_title": "Software Engineer",
+      "company_name": "Google LLC",
+      "remote_or_onsite": "Remote",
+      "location": "San Francisco, CA",
+      "fulltime_or_parttime": "Full-time",
+      "salary": "$100K - $120K",
+      "job_description": "We are looking for a talented software engineer to join our team.",
+      "job_responsibility": "- Design and develop software applications\n- Collaborate with cross-functional teams\n- Write clean, efficient, and maintainable code",
+      "educational_requirements": "Bachelor's degree in Computer Science or related field",
+      "experiences": "3+ years of experience in software development",
+      "contact_information": {
+        "phone": "555-123-4567",
+        "email": "jobs@google.com"
+      }
+    },
+    {
+      "id": 2,
+      "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/netflix.png",
+      "job_title": "Marketing Manager",
+      "company_name": "Netflix",
+      "remote_or_onsite": "Onsite",
+      "location": "New York, NY",
+      "fulltime_or_parttime": "Full-time",
+      "salary": "$80K - $100K",
+      "job_description": "We are seeking a Marketing Manager to oversee our marketing campaigns.",
+      "job_responsibility": "- Develop and implement marketing strategies\n- Analyze market trends and customer behavior\n- Collaborate with internal teams and external vendors",
+      "educational_requirements": "Bachelor's degree in Marketing or related field",
+      "experiences": "5+ years of experience in marketing",
+      "contact_information": {
+        "phone": "555-987-6543",
+        "email": "jobs@netflix.com"
+      }
+    },
+    {
+      "id": 3,
+      "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/Freepik.svg.png",
+      "job_title": "Graphic Designer",
+      "company_name": "Freepik",
+      "remote_or_onsite": "Remote",
+      "location": "Chicago, IL",
+      "fulltime_or_parttime": "Part-time",
+      "salary": "$30 - $50 per hour",
+      "job_description": "We are looking for a talented Graphic Designer to create engaging visual content.",
+      "job_responsibility": "- Design graphics for websites, social media, and other digital platforms\n- Collaborate with copywriters and marketing team\n- Ensure brand consistency across all designs",
+      "educational_requirements": "Bachelor's degree in Graphic Design or related field",
+      "experiences": "2+ years of experience in graphic design",
+      "contact_information": {
+        "phone": "555-555-1212",
+        "email": "jobs@freepik.com"
+      }
+    },
+    {
+        "id": 4,
+        "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/tesla.png",
+        "job_title": "Data Analyst",
+        "company_name": "Tesla",
+        "remote_or_onsite": "Onsite",
+        "location": "Boston, MA",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$70K - $90K",
+        "job_description": "We are seeking a Data Analyst to analyze and interpret complex data sets.",
+        "job_responsibility": "- Collect and analyze large data sets\n- Identify trends and patterns in data\n- Collaborate with cross-functional teams to provide insights and recommendations",
+        "educational_requirements": "Bachelor's degree in Statistics, Mathematics, or related field",
+        "experiences": "2+ years of experience in data analysis",
+        "contact_information": {
+          "phone": "555-555-1234",
+          "email": "jobs@tesla.com"
+        }
+      },
+      {
+        "id": 5,
+        "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/adobe.png",
+        "job_title": "Human Resources Manager",
+        "company_name": "Adobe",
+        "remote_or_onsite": "Onsite",
+        "location": "Houston, TX",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$90K - $110K",
+        "job_description": "We are seeking a Human Resources Manager to oversee all HR functions.",
+        "job_responsibility": "- Develop and implement HR policies and procedures\n- Manage recruitment and retention efforts\n- Provide guidance and support to employees and managers",
+        "educational_requirements": "Bachelor's degree in Human Resources or related field",
+        "experiences": "5+ years of experience in HR management",
+        "contact_information": {
+          "phone": "555-555-5678",
+          "email": "jobs@adobe.com"
+        }
+      },
+      {
+        "id": 6,
+        "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/fiver.webp",
+        "job_title": "Marketing Coordinator",
+        "company_name": "Fiver",
+        "remote_or_onsite": "Remote",
+        "location": "Anywhere",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$50K - $60K",
+        "job_description": "We are seeking a Marketing Coordinator to support our marketing team.",
+        "job_responsibility": "- Develop and execute marketing campaigns\n- Create content for website, social media and other channels\n- Analyze and report on campaign performance",
+        "educational_requirements": "Bachelor's degree in Marketing or related field",
+        "experiences": "2+ years of experience in marketing coordination",
+        "contact_information": {
+          "phone": "555-555-9012",
+          "email": "jobs@fiver.com"
+        }
+      },
+      {
+        "id": 7,
+        "company_logo": "https://mrlaboratory.github.io/ImagesUploadGetLink/amazon.png",
+        "job_title": "Software Engineer",
+        "company_name": "Amazon",
+        "remote_or_onsite": "Onsite",
+        "location": "San Francisco, CA",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$100K - $120K",
+        "job_description": "We are seeking a Software Engineer to develop and maintain our software systems.",
+        "job_responsibility": "- Write clean, maintainable code\n- Collaborate with cross-functional teams to design and implement new features\n- Troubleshoot and debug software issues",
+        "educational_requirements": "Bachelor's degree in Computer Science or related field",
+        "experiences": "5+ years of experience in software development",
+        "contact_information": {
+          "phone": "555-555-3456",
+          "email": "jobs@amazon.com"
+        }
+      }
+      
+      
+]
