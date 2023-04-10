@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Header = () => {
     return (
-        <div className='flex justify-between pt-8 pb-5 container mx-auto'>
+        <div className='flex flex-col p-10 md:flex-row  justify-between md:pt-8 md:pb-5 container mx-auto'>
             
-            <h2 className='text-[#1A1919] text-3xl font-bold'>Job Linkers</h2>
-            <div className='flex justify-center items-center'>
+          <Link  state={'Home'}  to='/' >  <h2 className='text-[#1A1919] text-3xl font-bold'>Job Linkers</h2> </Link>
+            <div className='flex flex-col p-10 md:flex-row md:p-0 text-left md:justify-center md:items-center'>
             <NavLink state={'Home'}
                     to='/'
                     aria-label='Home'
@@ -49,7 +49,7 @@ const Header = () => {
             </div>
 
             <div>
-                <button className='btn-primary'>Star Applying</button>
+                <button className='btn-primary'>Start Applying</button>
             </div>
 
         </div>

@@ -4,8 +4,8 @@ import man from "/man.png"
 const Banner = () => {
     return (
         
-            <div className='flex flex-wrap md:flex-nowrap justify-between gap-16 items-center container mx-auto'>
-            <div>
+            <div className='flex p-5 md:p-0 flex-wrap md:flex-nowrap justify-between mt-10 gap-16 items-center container mx-auto'>
+            <div className=''>
                 <h2 style={{lineHeight: '90px'}} className='text-7xl font-bold '>
                     Joblinker will <br />
                     help you to <br />
@@ -17,8 +17,8 @@ const Banner = () => {
                 <button className='btn-primary mt-6'>Get Started</button>
 
             </div>
-            <div>
-                <img src={man} alt="man" />
+            <div className=''>
+                <img className='w-full px-10 h-auto' src={man} alt="man" />
             </div>
         </div>
       
