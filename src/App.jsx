@@ -15,7 +15,6 @@ const App = () => {
     <div className=''>
       <header className='bg-[#f9f9ff]'>
         <Header></Header>
-
       </header>
 
       <div className='min-h-[calc(100vh-128px)]'>

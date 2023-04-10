@@ -1,0 +1,22 @@
+[
+    {
+      "designation": "Software Engineer",
+      "count": 250,
+      "image": "https://example.com/software-engineer.jpg"
+    },
+    {
+      "designation": "Graphic Designer",
+      "count": 265,
+      "image": "https://example.com/graphic-designer.jpg"
+    },
+    {
+      "designation": "Data Analyst",
+      "count": 300,
+      "image": "https://example.com/data-analyst.jpg"
+    },
+    {
+      "designation": "Marketing Manager",
+      "count": 189,
+      "image": "https://example.com/marketing-manager.jpg"
+    }
+  ]

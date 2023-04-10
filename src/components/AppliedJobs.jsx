@@ -26,7 +26,10 @@ const AppliedJobs = () => {
         setJobs(savedJobs)
     }, [])
 
-
+    const [filterBy, setFilterBy] = useState('remote');
+    const handleSelectChange = (event) => {
+        setFilterBy(event.target.value);
+    }
     console.log(jobs.length)
     return (
         <div>
@@ -44,7 +47,14 @@ const AppliedJobs = () => {
 
             </header>
             <div className='container mx-auto p-5'>
-                <button>Filter by</button>
+                <div className="flex items-center justify-end">
+                    
+                    <select id="filter" value={filterBy} onChange={handleSelectChange} className="select select-bordered w-full max-w-[150px]">
+                    <option selected>Filter by:</option>
+                        <option value="Onsite">Onsite</option>
+                        <option value="Remote">Remote</option>
+                    </select>
+                </div>
                 <div>
                     {
                         jobs.length == 0 ? <h2 className='text-center mt-10 text-3xl'>You haven't applied for a job yet</h2> : ''
@@ -78,7 +88,7 @@ const AppliedJobs = () => {
                                         </div>
                                     </div>
                                     <div className='flex justify-center items-center'>
-                                     <Link state={`${job.job_title} in ${job.company_name}`} className='btn-sm' to={`/job-details/${job.id}`}> View Details </Link>  
+                                        <Link state={`${job.job_title} in ${job.company_name}`} className='btn-ssm btn' to={`/job-details/${job.id}`}> View Details </Link>
                                     </div>
                                 </div>
 

@@ -6,8 +6,15 @@ import FeaturedJobs from './FeaturedJobs';
 const Home = () => {
     return (
         <div>
-           
-           <FeaturedJobs></FeaturedJobs>
+            <div className='bg-[#f9f9ff] pt-10'>
+                <Banner></Banner>
+            </div>
+            <section>
+                <Category></Category>
+            </section>
+            <section>
+                <FeaturedJobs></FeaturedJobs>
+            </section>
         </div>
     );
 };

@@ -23,7 +23,7 @@ const FeaturedJobs = () => {
             </div>
            {
             !limit ?  <div className='mt-5 flex justify-center items-center'>
-            <button onClick={()=> setLimit(true)} className='btn-primary'>See All Jobs</button>
+            <button onClick={()=> setLimit(true)} className='btn-primary btn'>See All Jobs</button>
         </div> : ''
            }
 

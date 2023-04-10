@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react';
 
-
-const Header = () => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div className='relative'>
@@ -68,4 +66,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;

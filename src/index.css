@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .btn-primary{
-    @apply bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-7 py-4 font-bold text-white rounded-lg
+    @apply bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-7 py-4 font-bold text-white rounded-lg border-none outline-none
 }
-.btn-sm{
-    @apply border font-bold px-4 py-2 rounded-lg bg-[#7E90FE] text-white cursor-pointer 
+.btn-ssm{
+    @apply border font-bold px-4 py-2 rounded-lg bg-[#7E90FE] text-white cursor-pointer outline-none border-none
 }
 
 .btn-outline-sm{
