@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary{
+    @apply bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-7 py-4 font-bold text-white rounded-lg
+}
+
+.active {
+    @apply text-[#7E90FE]
+}
