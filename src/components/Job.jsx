@@ -29,7 +29,7 @@ const Job = ({id, company_logo, job_title, company_name, remote_or_onsite, fullt
                     {salary}</div>
 
             </div>
-            <Link to={`/job-details/${id}`}><button className='btn-sm mt-5'>View details</button></Link>
+            <Link state={`${job_title} in ${company_name}`} to={`/job-details/${id}`}><button className='btn-sm mt-5'>View details</button></Link>
         </div>
     );
 };

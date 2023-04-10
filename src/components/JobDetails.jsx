@@ -1,16 +1,39 @@
-import React from 'react';
-import { useLoaderData, useParams, useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useLocation, useParams, useSearchParams } from 'react-router-dom';
 import Header from './Header';
 import vactor1 from '/Icons/vector1.png'
 import vactor2 from '/Icons/vector2.png'
+import { addToDb, getShoppingCart } from '../utilities/fakedb';
 
 const JobDetails = () => {
+    const [applied, setApplied] = useState(false)
+    const loc = useLocation()
+    if (loc.state) {
+        document.title = `${loc.state} - Job Linkers`
+    }
     const details = useLoaderData()
     const { id } = useParams()
     const { company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, location, salary, job_description, job_responsibility, educational_requirements, experiences, contact_information
 
     } = details.find(job => job.id == id)
 
+    const applyNow = (id) => {
+        setApplied(id)
+        addToDb(id)
+    }
+    const storageData = getShoppingCart()
+    useEffect(() => {
+        for (const dd in storageData) {
+            if (dd == id) {
+                setApplied(true)
+            }
+        }
+    }, [])
+    // console.log(storageData)
+    // const exist = storageData
+    // if(exist){
+    //     setApplied(true)
+    // }
 
     return (
         <div className=''>
@@ -22,15 +45,18 @@ const JobDetails = () => {
                 <img className='absolute bottom-0 left-0 z-0' src={vactor2} alt="" />
 
                 <h2 className='font-bold text-center text-5xl py-10 relative z-10'>Job Details</h2>
+                {
+                    loc.state ? <h2 className='font-bold text-center  text-[#7E90FE] text-2xl relative z-10'>Join as a {loc.state}</h2> : ""
+                }
 
             </header>
             <div className='p-5 md:p-0'>
                 <div className='mt-10 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 '>
                     <div className='md:col-span-2'>
-                        <p className='mt-5'><span className='font-bold'>Job Description</span> {job_description}</p>
-                        <p className='mt-5'><span className='font-bold '>Job Responsibility</span> {job_responsibility}</p>
-                        <p className='mt-5'><span className='font-bold '>Educational Requirements:</span> <br /> {educational_requirements}</p>
-                        <p className='mt-5'><span className='font-bold '>Experiences:</span> <br /> {experiences}</p>
+                        <p className='mt-5'><span className='font-bold'>Job Description : </span> {job_description}</p>
+                        <p className='mt-5'><span className='font-bold '>Job Responsibility : </span> {job_responsibility}</p>
+                        <p className='mt-5'><span className='font-bold '>Educational Requirements : </span> <br /> {educational_requirements}</p>
+                        <p className='mt-5'><span className='font-bold '>Experiences : </span> <br /> {experiences}</p>
                     </div>
                     <div>
                         <div className='p-8 bg-gradient-to-r  from-[#7e8ffe10] to-[#9873ff10] rounded-lg'>
@@ -46,7 +72,7 @@ const JobDetails = () => {
                                     <span className='font-bold mr-1'>Job Title :</span>  {job_title}</p>
                             </div>
 
-                            <h3 className='font-bold pb-5 text-xl border-b-2 mt-5  text-2xl'>Contact Information</h3>
+                            <h3 className='font-bold pb-5 text-xl border-b-2 mt-10  text-2xl'>Contact Information</h3>
                             <div className='text-[#474747] pt-3'>
                                 <p className='flex items-center text-xl mb-2'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-1 text-[#7E90FE]">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -64,7 +90,7 @@ const JobDetails = () => {
                             </div>
 
                         </div>
-                        <button className='btn-primary w-full mt-10'>Apply now</button>
+                        <button onClick={() => applyNow(id)} disabled={applied ? true : false} className='btn-primary w-full mt-10'>{applied ? "Applied" : "Apply Now "}</button>
                     </div>
 
                 </div>
