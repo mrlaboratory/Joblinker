@@ -5,6 +5,13 @@
 .btn-primary{
     @apply bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-7 py-4 font-bold text-white rounded-lg
 }
+.btn-sm{
+    @apply border font-bold px-4 py-2 rounded-lg bg-[#7E90FE] text-white cursor-pointer 
+}
+
+.btn-outline-sm{
+    @apply border border-[#7E90FE] text-[#7E90FE] font-bold px-4 py-2 rounded-lg hover:bg-[#7E90FE] hover:text-white cursor-pointer duration-200
+}
 
 .active {
     @apply text-[#7E90FE]
