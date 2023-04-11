@@ -21,7 +21,7 @@ const Category = () => {
                     category.map(cat => {
                         return <div className='p-10 rounded-lg bg-gradient-to-r from-[#7e8ffe10] to-[#9873ff10]'>
                             <div className='w-[80px]'>
-                                <img className='w-full p-3 bg-[#9873FF] rounded-lg' src={cat.image} alt={cat.designation} />
+                                <img className='w-full p-3 bg-[#9873ff61] rounded-lg' src={cat.image} alt={cat.designation} />
                             </div>
                             <h3 className='text-xl font-bold mt-6'>{cat.designation}</h3>
                             <p>{cat.count} Jobs Available</p>

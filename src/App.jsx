@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 
 const App = () => {
   const loc = useLocation()
-  if(loc.state){
+  if (loc.state) {
     document.title = `${loc.state} - Job Linkers`
   }
 
@@ -15,14 +15,15 @@ const App = () => {
   return (
     <div className=''>
       <header className='bg-[#f9f9ff]'>
-       <Navbar></Navbar>
+        <Navbar></Navbar>
       </header>
-
       <div className='min-h-[calc(100vh-128px)]'>
         <Outlet></Outlet>
       </div>
 
-      <Footer></Footer>
+      <div className='bg-black mt-10'>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };
