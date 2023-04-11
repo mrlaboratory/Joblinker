@@ -27,17 +27,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>
       },
-      {
-        path: '/statistics',
-        element: <Statistics></Statistics>
-      },
-      {
-        path: '/blog',
-        element: <Blog></Blog>
-      }
-    
-
-
     ]
   },
   {
@@ -49,11 +38,16 @@ const router = createBrowserRouter([
     path:'/job-details/:id',
     element: <JobDetails></JobDetails>,
     loader: () => fetch('/jobdata.json')
-
+  },
+  {
+    path: '/statistics',
+    element: <Statistics></Statistics>
+  },
+  {
+    path: '/blog',
+    element: <Blog></Blog>
   }
 ])
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
   //   <RouterProvider router={router}></RouterProvider>

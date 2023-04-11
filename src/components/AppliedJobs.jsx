@@ -51,19 +51,7 @@ const AppliedJobs = () => {
     }, [filterBy])
     return (
         <div>
-            <header className='relative bg-[#f9f9ff] min-h-[300px]'>
-                <div className='relative z-10'>
-                    <Header></Header>
-                </div>
-                <img className='absolute top-0 right-0 z-0' src={vactor1} alt="" />
-                <img className='absolute bottom-0 left-0 z-0' src={vactor2} alt="" />
-
-
-                {
-                    loc.state ? <h2 className='font-bold text-center text-5xl py-10 text-[#7E90FE] relative z-10'>{loc.state}</h2> : ""
-                }
-
-            </header>
+            <Header></Header>
             <div className='container mx-auto p-5'>
                 <div className="flex items-center justify-end">
 

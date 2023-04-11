@@ -20,7 +20,6 @@ const App = () => {
       <div className='min-h-[calc(100vh-128px)]'>
         <Outlet></Outlet>
       </div>
-
       <div className='bg-black mt-10'>
         <Footer></Footer>
       </div>

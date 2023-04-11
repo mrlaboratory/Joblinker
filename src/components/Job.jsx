@@ -12,12 +12,12 @@ const Job = ({id, company_logo, job_title, company_name, remote_or_onsite, fullt
 
             <h3 className='mt-6 font-bold text-2xl text-[#474747]'>{job_title}</h3>
             <h4 className='mt-3 text-xl text-[#757575]'>{company_name}</h4>
-            <div className='flex mt-3'>
+            <div className='flex mt-3 flex-wrap gap-2'>
                 <p className='btn-outline-sm mr-2'>{remote_or_onsite}</p>
                 <p className='btn-outline-sm'>{fulltime_or_parttime}</p>
 
             </div>
-            <div className='flex mt-3'>
+            <div className='flex mt-3 flex-wrap gap-2'>
                 <div className='flex justify-start items-center mr-4 gap-1 text-[#757575]'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
