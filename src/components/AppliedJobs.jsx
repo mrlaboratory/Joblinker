@@ -95,7 +95,7 @@ const AppliedJobs = () => {
                                         </div>
                                     </div>
                                     <div className='flex justify-center items-center mt-2'>
-                                        <Link state={`${job.job_title} in ${job.company_name}`} className='btn-ssm btn' to={`/job-details/${job.id}`}> View Details </Link>
+                                        <Link state={`${job.job_title} in ${job.company_name}`} className='btn-ssm btn' to={`/job/${job.id}`}> View Details </Link>
                                     </div>
                                 </div>
 

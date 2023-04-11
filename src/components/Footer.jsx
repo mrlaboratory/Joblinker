@@ -52,7 +52,7 @@ const Footer = () => {
 
             </div>
             <br />
-            <div className='flex justify-between'>
+            <div className='flex flex-wrap gap-2 justify-between'>
 
                 <p>@2023 Joblinkers. All Rights Reserved</p>
                 <p>Powered by Joblinkers</p>
