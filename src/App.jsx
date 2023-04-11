@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 const App = () => {
   const loc = useLocation()
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <div className=''>
       <header className='bg-[#f9f9ff]'>
-        <Header></Header>
+       <Navbar></Navbar>
       </header>
 
       <div className='min-h-[calc(100vh-128px)]'>

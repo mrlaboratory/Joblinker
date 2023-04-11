@@ -26,11 +26,29 @@ const AppliedJobs = () => {
         setJobs(savedJobs)
     }, [])
 
-    const [filterBy, setFilterBy] = useState('remote');
+
+
+    const [filterBy, setFilterBy] = useState('');
     const handleSelectChange = (event) => {
         setFilterBy(event.target.value);
     }
-    console.log(jobs.length)
+ 
+    // console.log(jobs.length)
+    useEffect(() => {
+        const savedJobs = []
+        for (const dd in storageData) {
+            const savedJob = details.find(j => j.id == dd)
+            if (savedJob) {
+                savedJobs.push(savedJob)
+            }
+        }
+        if(filterBy){
+            const newJobs = savedJobs.filter(j => j.remote_or_onsite == filterBy)
+            setJobs(newJobs)
+        }else{
+            setJobs(savedJobs)
+        }
+    }, [filterBy])
     return (
         <div>
             <header className='relative bg-[#f9f9ff] min-h-[300px]'>
@@ -48,9 +66,9 @@ const AppliedJobs = () => {
             </header>
             <div className='container mx-auto p-5'>
                 <div className="flex items-center justify-end">
-                    
+
                     <select id="filter" value={filterBy} onChange={handleSelectChange} className="select select-bordered w-full max-w-[150px]">
-                    <option selected>Filter by:</option>
+                        <option value="" selected>Filter by:</option>
                         <option value="Onsite">Onsite</option>
                         <option value="Remote">Remote</option>
                     </select>

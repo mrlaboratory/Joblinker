@@ -29,7 +29,7 @@ const Statistics = () => {
                     <Bar dataKey="marks" barSize={20} fill="#7E90FE" />
                     <Line type="monotone" dataKey="passMark" stroke="#9873FF" />
                     <Line type="step" dataKey="highestMarks" stroke="#139813" />
-                    {/* <Area type="monotone" dataKey="avrage" fill="#8884d854" stroke="#8884d854" /> */}
+                    <Area type="monotone" dataKey="marks" fill="#8884d854" stroke="#8884d854" />
                 </ComposedChart>
             </ResponsiveContainer>
 
