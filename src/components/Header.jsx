@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import vactor1 from '/Icons/vector1.png'
 import vactor2 from '/Icons/vector2.png'
 
-const Header = () => {
+const Header = ({children}) => {
     const loc = useLocation()
     if (loc.state) {
         document.title = `${loc.state} - Job Linkers`
@@ -19,9 +19,7 @@ const Header = () => {
         <img className='absolute bottom-0 left-0 z-0' src={vactor2} alt="" />
 
 
-        {
-            loc.state ? <h2 className='font-bold text-center text-5xl py-10 text-[#7E90FE] relative z-10'>{loc.state}</h2> : ""
-        }
+       <h2 className='font-bold text-center text-5xl py-10 text-[#7E90FE] relative z-10'>{children}</h2>
 
     </header>
     );

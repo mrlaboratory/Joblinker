@@ -43,7 +43,7 @@ const JobDetails = () => {
         
         <div className=''>
            
-                    <Header></Header>
+                    <Header>{job_title} in {company_name}</Header>
               
             <div className='p-5 md:p-0'>
                 <div className='mt-10 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 '>

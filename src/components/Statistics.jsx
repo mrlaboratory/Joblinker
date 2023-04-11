@@ -16,7 +16,7 @@ const Statistics = () => {
 
     return (
         <div>
-            <Header></Header>
+            <Header>Statistics</Header>
             <div className='container mx-auto'>
                 <h2 className='text-center font-bold text-3xl mt-5 mb-5'>Assignment marks - With ComposedChart</h2>
 

@@ -5,7 +5,7 @@ import Footer from './Footer';
 const Blog = () => {
     return (
         <div>
-            <Header></Header>
+            <Header>Blog</Header>
 
             <div className='container mx-auto p-5'>
                 <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">

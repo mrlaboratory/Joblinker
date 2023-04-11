@@ -52,7 +52,7 @@ const AppliedJobs = () => {
     }, [filterBy])
     return (
         <div>
-            <Header></Header>
+            <Header>Applied Jobs</Header>
             <div className='container mx-auto p-5'>
                 <div className="flex items-center justify-end">
 
