@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useLoaderData, useLocation, useNavigation, useParams, useSearchParams } from 'react-router-dom';
 import Header from './Header';
 import vactor1 from '/Icons/vector1.png'
 import vactor2 from '/Icons/vector2.png'
 import { addToDb, getShoppingCart } from '../utilities/fakedb';
 import Footer from './Footer';
+import { toast } from 'react-hot-toast';
 
 const JobDetails = () => {
+    const navigation = useNavigation()
     const [applied, setApplied] = useState(false)
     const loc = useLocation()
     if (loc.state) {
@@ -21,6 +23,7 @@ const JobDetails = () => {
     const applyNow = (id) => {
         setApplied(id)
         addToDb(id)
+        toast.success(`Applied for ${job_title} on ${company_name}`);
     }
     const storageData = getShoppingCart()
     useEffect(() => {
@@ -37,8 +40,9 @@ const JobDetails = () => {
     // }
 
     return (
+        
         <div className=''>
-          
+           
                     <Header></Header>
               
             <div className='p-5 md:p-0'>

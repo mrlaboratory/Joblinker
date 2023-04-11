@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div className='relative'>
             <div className='relative flex flex-col p-10 md:flex-row  justify-between md:px-3 md:pt-8 md:pb-5 container mx-auto'>
-
+            
                 <Link state={'Home'} to='/' >  <h2 className='text-[#1A1919] text-3xl font-bold'>Job Linkers</h2> </Link>
                 <div
                     className={(`${isOpen ? 'block' : 'hidden'} md:flex flex flex-col p-10 md:flex-row md:p-0 text-left md:justify-center md:items-center `)}
@@ -52,8 +53,8 @@ const Navbar = () => {
                 </div>
 
                 <div>
-
-                    <button className={`${isOpen ? 'block' : 'hidden'} btn btn-primary md:block duration-300`}>Start Applying</button>
+                <HashLink to="/#featuredjobs" state="Featured Jobs"> <button className={`${isOpen ? 'block' : 'hidden'} btn btn-primary md:block duration-300`}>Start Applying</button> </HashLink>
+                   
                 </div>
 
 

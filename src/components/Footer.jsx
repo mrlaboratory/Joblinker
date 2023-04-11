@@ -1,5 +1,6 @@
 import React from 'react';
 import group from '/Icons/group.png'
+import { Toaster } from 'react-hot-toast';
 
 const Footer = () => {
     return (
@@ -57,6 +58,10 @@ const Footer = () => {
                 <p>Powered by Joblinkers</p>
 
             </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         </div>
     );
 };

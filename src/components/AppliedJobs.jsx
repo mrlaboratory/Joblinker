@@ -4,6 +4,7 @@ import { Link, useLoaderData, useLocation, useParams, useSearchParams } from 're
 import vactor1 from '/Icons/vector1.png'
 import vactor2 from '/Icons/vector2.png'
 import { getShoppingCart } from '../utilities/fakedb';
+import Footer from './Footer';
 
 const AppliedJobs = () => {
     const loc = useLocation()
@@ -67,20 +68,20 @@ const AppliedJobs = () => {
                     }
                     {
                         jobs.map(job => {
-                            return <div className='flex justify-between border mt-5 gap-5 p-5 rounded-lg'>
+                            return <div className='flex flex-wrap justify-between border mt-5 gap-5 p-5 rounded-lg'>
                                 <div className='w-[240px] h-[240px] bg-[#F4F4F4] rounded-lg flex justify-center items-center'>
-                                    <img className='w-full p-3 ' src={job.company_logo} alt="" />
+                                    <img className='w-full p-5 ' src={job.company_logo} alt="" />
                                 </div>
-                                <div className='flex grow justify-between text-[#474747]'>
+                                <div className='flex flex-wrap grow justify-between text-[#474747]'>
                                     <div className='flex flex-col justify-center'>
                                         <h2 className='font-bold text-2xl '> {job.job_title}</h2>
                                         <h2 className='text-2xl mt-2'> {job.company_name}</h2>
-                                        <div className='flex mt-3'>
+                                        <div className='flex flex-wrap gap-1 mt-3'>
                                             <p className='btn-outline-sm mr-2'>{job.remote_or_onsite}</p>
                                             <p className='btn-outline-sm'>{job.fulltime_or_parttime}</p>
 
                                         </div>
-                                        <div className='flex mt-3'>
+                                        <div className='flex flex-wrap gap-2 mt-3'>
                                             <div className='flex justify-start items-center mr-4 gap-1 text-[#757575]'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -93,7 +94,7 @@ const AppliedJobs = () => {
 
                                         </div>
                                     </div>
-                                    <div className='flex justify-center items-center'>
+                                    <div className='flex justify-center items-center mt-2'>
                                         <Link state={`${job.job_title} in ${job.company_name}`} className='btn-ssm btn' to={`/job-details/${job.id}`}> View Details </Link>
                                     </div>
                                 </div>
@@ -105,7 +106,9 @@ const AppliedJobs = () => {
                 </div>
             </div>
 
-
+            <div className='bg-black mt-10'>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
