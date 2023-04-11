@@ -12,7 +12,7 @@ const Home = () => {
             <section>
                 <Category></Category>
             </section>
-            <section>
+            <section id='featuredjobs'>
                 <FeaturedJobs></FeaturedJobs>
             </section>
         </div>

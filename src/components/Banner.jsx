@@ -1,5 +1,6 @@
 import React from 'react';
 import man from "/man.png"
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -14,7 +15,9 @@ const Banner = () => {
                 <p className='mt-6'>
                 Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
                 </p>
-                <button className='btn-primary mt-6 btn'>Get Started</button>
+               <Link to={'#featuredjobs'}>
+               <button className='btn-primary mt-6 btn'>Get Started</button>
+                </Link> 
 
             </div>
             <div className=''>
